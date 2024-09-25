@@ -12,65 +12,66 @@
             color: #333;
         }
 
-        /* Header avec fond dégradé */
+        /* Header avec fond et position fixe */
         header {
-            position: relative;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            background-color: #333;
             color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 3em;
-            letter-spacing: 3px;
+            margin: 0;
+            font-size: 1.5em;
+            letter-spacing: 2px;
         }
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        /* Menu hamburger moderne avec fond transparent */
         .menu {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
             cursor: pointer;
-            z-index: 1000;
         }
 
         .menu div {
-            width: 35px;
-            height: 5px;
+            width: 30px;
+            height: 3px;
             background-color: white;
-            margin: 6px 0;
-            transition: 0.4s;
+            margin: 5px 0;
         }
 
-        /* Menu caché avec transparence, adaptable en hauteur */
+        /* Contenu principal */
+        main {
+            padding-top: 80px; /* Pour laisser de l'espace sous le header fixe */
+        }
+
+        /* Menu caché avec transparence, apparaît au clic */
         nav {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            right: -300px;
+            top: 0;
+            height: 100%;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.85);
             color: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: right;
+            padding: 50px 20px;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        nav.active {
+            right: 0;
         }
 
         nav a {
             color: white;
             font-size: 1.5em;
             text-decoration: none;
-            margin: 15px 0;
+            margin: 20px 0;
             display: block;
         }
 
@@ -101,12 +102,15 @@
             object-fit: cover;
         }
 
-        /* Pied de page */
+        /* Footer similaire au header */
         footer {
-            text-align: center;
-            padding: 20px;
             background-color: #333;
             color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
     </style>
@@ -114,26 +118,29 @@
 <body>
 
 <header>
+    <h1>Jérémie Miroof</h1>
     <div class="menu" onclick="toggleMenu()">
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <h1>Jérémie Miroof</h1>
-    <p>Admin Système et Réseau</p>
-
-    <!-- Menu de navigation -->
-    <nav id="navMenu">
-        <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projets</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
 
+<nav id="navMenu">
+    <a href="#about">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <main>
-    <!-- Section des réseaux sociaux -->
-    <div class="social">
+    <!-- Contenu principal -->
+    <section id="about">
+        <h2>À propos</h2>
+        <p>Bienvenue sur ma page personnelle, je suis administrateur système et réseau...</p>
+    </section>
+
+    <section class="social">
         <a href="https://instagram.com">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
@@ -146,7 +153,7 @@
         <a href="https://linkedin.com">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
         </a>
-    </div>
+    </section>
 </main>
 
 <footer>
