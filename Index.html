@@ -3,139 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Jérémie Miroof</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Section principale avec le logo centré */
-        .main-section {
-            position: relative;
-            background: url('https://source.unsplash.com/1600x900/?water') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Grand logo centré */
-        .logo {
-            font-size: 20vw;
-            font-weight: bold;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Menu Hamburger */
-        .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 30px;
-            height: 25px;
-            cursor: pointer;
-        }
-
-        .menu-icon div {
-            width: 100%;
-            height: 5px;
-            background-color: white;
-            margin: 4px 0;
-        }
-
-        /* Menu latéral */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            height: 100%;
-            width: 300px;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
-            transition: right 0.3s ease;
-            padding: 20px;
-        }
-
-        .side-menu.active {
-            right: 0;
-        }
-
-        .side-menu ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .side-menu ul li {
-            margin: 20px 0;
-        }
-
-        .side-menu ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.2em;
-        }
-
-        .side-menu-logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 30vw;
-            }
-        }
-    </style>
+    <title>Crusta C</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Crusta C logo">
+        </div>
 
-<!-- Section principale avec le logo centré -->
-<div class="main-section">
-    <div class="logo">
-        M
+        <div class="hamburger-menu" id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="#"><li>Accueil</li></a>
+                <a href="#"><li>À propos</li></a>
+                <a href="#"><li>Services</li></a>
+                <a href="#"><li>Contact</li></a>
+            </ul>
+        </div>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
 
-<!-- Menu latéral caché qui apparaît au clic -->
-<div class="side-menu" id="sideMenu">
-    <div class="side-menu-logo">
-        <img src="https://via.placeholder.com/100" alt="Logo" width="100">
-    </div>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#identity">Corporate identity</a></li>
-        <li><a href="#expertise">Our expertise</a></li>
-        <li><a href="#sites">Our production sites</a></li>
-        <li><a href="#products">Our product ranges</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#join">Join us</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
-
-<script>
-    // Fonction pour ouvrir/fermer le menu latéral
-    function toggleMenu() {
-        var menu = document.getElementById('sideMenu');
-        menu.classList.toggle('active');
-    }
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
