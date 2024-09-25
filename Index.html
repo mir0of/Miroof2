@@ -12,11 +12,10 @@
             color: #333;
         }
 
-        /* Header */
+        /* Header avec fond dégradé */
         header {
             position: relative;
-            background: url('https://source.unsplash.com/1600x900/?network') no-repeat center center;
-            background-size: cover;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             height: 100vh;
             display: flex;
             align-items: center;
@@ -35,7 +34,7 @@
             margin-top: 10px;
         }
 
-        /* Menu hamburger moderne */
+        /* Menu hamburger moderne avec fond transparent */
         .menu {
             position: absolute;
             top: 20px;
@@ -54,14 +53,14 @@
             transition: 0.4s;
         }
 
-        /* Menu caché */
+        /* Menu caché avec transparence */
         nav {
             position: fixed;
             right: -250px;
             top: 0;
             height: 100%;
             width: 250px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             display: flex;
             flex-direction: column;
@@ -91,19 +90,20 @@
 
         .social a {
             margin: 0 15px;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             display: inline-block;
             background-color: white;
             border-radius: 50%;
             text-align: center;
-            line-height: 40px;
+            line-height: 50px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .social a img {
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
         }
 
         /* Pied de page */
