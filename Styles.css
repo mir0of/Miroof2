@@ -12,9 +12,7 @@ body, html {
 .container {
     position: relative;
     height: 100vh;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to bottom right, #4A90E2, #0F62FE); /* Dégradé bleu */
     display: flex;
     justify-content: center;
     align-items: center;
