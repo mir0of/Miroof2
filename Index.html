@@ -12,9 +12,10 @@
             color: #333;
         }
 
+        /* Header */
         header {
             position: relative;
-            background: url('https://source.unsplash.com/1600x900/?technology,network') no-repeat center center;
+            background: url('https://source.unsplash.com/1600x900/?network') no-repeat center center;
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -34,7 +35,7 @@
             margin-top: 10px;
         }
 
-        /* Menu hamburger */
+        /* Menu hamburger moderne */
         .menu {
             position: absolute;
             top: 20px;
@@ -81,23 +82,36 @@
             margin: 15px 0;
         }
 
+        /* Logos des réseaux sociaux */
+        .social {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .social a {
+            margin: 0 15px;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .social a img {
+            width: 20px;
+            height: 20px;
+        }
+
         /* Pied de page */
         footer {
             text-align: center;
             padding: 20px;
             background-color: #333;
             color: white;
-        }
-
-        footer .social {
-            margin-top: 10px;
-        }
-
-        footer .social a {
-            margin: 0 10px;
-            color: white;
-            font-size: 1.5em;
-            text-decoration: none;
         }
 
     </style>
@@ -123,16 +137,25 @@
 </header>
 
 <main>
-    <!-- Votre contenu ici -->
+    <!-- Section des réseaux sociaux -->
+    <div class="social">
+        <a href="https://instagram.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://facebook.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://pinterest.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest">
+        </a>
+        <a href="https://linkedin.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+    </div>
 </main>
 
 <footer>
     <p>&copy; 2023 Jérémie Miroof</p>
-    <div class="social">
-        <a href="https://instagram.com">Instagram</a>
-        <a href="https://facebook.com">Facebook</a>
-        <a href="https://linkedin.com">LinkedIn</a>
-    </div>
 </footer>
 
 <script>
