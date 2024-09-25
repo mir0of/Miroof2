@@ -67,6 +67,11 @@
             align-items: center;
             justify-content: center;
             transition: 0.3s;
+            z-index: 999;
+        }
+
+        nav.active {
+            right: 0;
         }
 
         nav a {
@@ -74,10 +79,6 @@
             font-size: 1.5em;
             text-decoration: none;
             margin: 15px 0;
-        }
-
-        .menu.active nav {
-            right: 0;
         }
 
         /* Pied de page */
@@ -113,7 +114,7 @@
     <p>Admin Système et Réseau</p>
 
     <!-- Menu de navigation -->
-    <nav>
+    <nav id="navMenu">
         <a href="#about">À propos</a>
         <a href="#services">Services</a>
         <a href="#projects">Projets</a>
@@ -136,8 +137,8 @@
 
 <script>
     function toggleMenu() {
-        document.querySelector('.menu').classList.toggle('active');
-        document.querySelector('nav').classList.toggle('active');
+        var navMenu = document.getElementById("navMenu");
+        navMenu.classList.toggle("active");
     }
 </script>
 
